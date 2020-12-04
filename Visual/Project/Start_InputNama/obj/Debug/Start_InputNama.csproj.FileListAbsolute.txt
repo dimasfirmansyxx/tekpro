@@ -1,0 +1,18 @@
+C:\Users\User\Documents\Visual Studio 2015\Projects\Home\Start_InputNama\bin\Debug\Start_InputNama.exe.config
+C:\Users\User\Documents\Visual Studio 2015\Projects\Home\Start_InputNama\bin\Debug\Start_InputNama.exe
+C:\Users\User\Documents\Visual Studio 2015\Projects\Home\Start_InputNama\bin\Debug\Start_InputNama.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\Home\Start_InputNama\obj\Debug\Start_InputNama.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\Home\Start_InputNama\obj\Debug\Start_InputNama.Properties.Resources.resources
+C:\Users\User\Documents\Visual Studio 2015\Projects\Home\Start_InputNama\obj\Debug\Start_InputNama.csproj.GenerateResource.Cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\Home\Start_InputNama\obj\Debug\Start_InputNama.exe
+C:\Users\User\Documents\Visual Studio 2015\Projects\Home\Start_InputNama\obj\Debug\Start_InputNama.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\Home\Start_InputNama\obj\Debug\Start_InputNama.Start_InputNama.resources
+C:\Project_kelompok1\Visual\Home\Start_InputNama\bin\Debug\Start_InputNama.exe.config
+C:\Project_kelompok1\Visual\Home\Start_InputNama\obj\Debug\Start_InputNama.exe
+C:\Project_kelompok1\Visual\Home\Start_InputNama\obj\Debug\Start_InputNama.pdb
+C:\Project_kelompok1\Visual\Home\Start_InputNama\bin\Debug\Start_InputNama.exe
+C:\Project_kelompok1\Visual\Home\Start_InputNama\bin\Debug\Start_InputNama.pdb
+C:\Project_kelompok1\Visual\Home\Start_InputNama\obj\Debug\Start_InputNama.csprojResolveAssemblyReference.cache
+C:\Project_kelompok1\Visual\Home\Start_InputNama\obj\Debug\Start_InputNama.Properties.Resources.resources
+C:\Project_kelompok1\Visual\Home\Start_InputNama\obj\Debug\Start_InputNama.Start_InputNama.resources
+C:\Project_kelompok1\Visual\Home\Start_InputNama\obj\Debug\Start_InputNama.csproj.GenerateResource.Cache
