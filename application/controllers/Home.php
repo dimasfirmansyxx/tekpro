@@ -25,4 +25,10 @@ class Home extends CI_Controller {
 			$this->load->view("zzz/foot");
 		}
 	}
+
+	public function destroy_session()
+	{
+		$this->sess->destroy();
+		redirect(base_url());
+	}
 }

@@ -21,4 +21,9 @@ class Sess extends CI_Model {
 			return false;
 		}
 	}
+
+	public function destroy()
+	{
+		session_destroy();
+	}
 }
