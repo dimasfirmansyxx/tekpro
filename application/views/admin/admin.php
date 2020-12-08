@@ -3,8 +3,15 @@
     <div class="col-8 list-of-question-area">
         <div class="card">
           <div class="card-body text-center p-5">
-            <div class="text-right">
-              <button class="btn mb-3 text-white" style="background: #700bfb" data-toggle="modal" data-target="#mdlAddQuestion">+ Add Question</button>
+            <div class="row">
+              <div class="col-md-6 text-left">
+                <button class="btn mb-3 text-white" style="background: #700bfb" data-toggle="modal" data-target="#mdlAddQuestion">+ Add Question</button>
+              </div>
+              <div class="col-md-6 text-right">
+                <a href="#" data-toggle="modal" data-target="#mdlLogout">
+                  <img src="<?= base_url("assets/template/img/logout.png")?>" height="40">
+                </a>
+              </div>
             </div>
             <table class="table table-bordered bg-white">
               <thead>
@@ -79,6 +86,18 @@
                 <input type="image" alt="Submit" name="submit" src="<?= base_url("assets/template/img/btn-confirm.png") ?>">
             </div>
         </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="mdlLogout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-4">
+        <h2>Are you sure wan't to logout ?</h2>
+        <button type="button" class="btn btn-secondary mt-3 mr-1 btn-lg" data-dismiss="modal">No</button>
+        <a href="<?= base_url('home/destroy_session') ?>" class="btn btn-lg text-white mt-3 ml-1" style="background: #700bfb">Yes</a>
       </div>
     </div>
   </div>
