@@ -76,7 +76,7 @@
               </select>
             </div>
             <div class="text-center">
-                <input type="image" alt="Submit" src="img/btn-confirm.png">
+                <input type="image" alt="Submit" name="submit" src="img/btn-confirm.png">
             </div>
         </form>
       </div>
