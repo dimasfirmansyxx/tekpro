@@ -16,6 +16,7 @@ class Admin extends CI_Controller {
 			
 		} else {
 			$data['pagetitle'] = "Admin";
+			$data['questions'] = $this->question->get();
 			$this->load->view("zzz/head",$data);
 			$this->load->view("admin/admin");
 			$this->load->view("zzz/foot");
