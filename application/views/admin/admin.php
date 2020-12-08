@@ -44,7 +44,7 @@
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-body">
-        <form action="" method="post" class="form-input-question">
+        <form action="" method="post" class="form-input-question" enctype="multipart/form-data">
             <div class="form-group">
                 <label>Question</label>
                 <input type="text" name="question" class="form-control" required autocomplete="off">
