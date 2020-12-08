@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body style="background-image: url(img/main-background.png);">
+    <div class="top-bar text-right fixed-top" style="background-image: url(img/top-bar.png);">
+        <div class="container">
+            <a href="index.html"><img src="img/home-ico.png" class="mt-1 ml-3"></a>
+            <a href="setting.html"><img src="img/setting-ico.png" class="mt-1 ml-3"></a>            
+        </div>
+    </div>
+    <div class="bot-bar fixed-bottom" style="background-image: url(img/bot-bar.png);">
+
+    </div>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-12 quiz-area">
+              <div class="card">
+                <div class="card-body">
+                  <div class="text-center">
+                    <h3>1. What is this ?</h3>
+                  </div>
+
+                  <div class="text-center">
+                    <img src="img/no-image.png" height="250">
+                  </div>
+
+                  <div class="row text-center">
+                    <div class="col-md-2">
+                      <a href="#"><img src="img/arrow.png" class="quiz-arrow-left"></a>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <button class="btn btn-block options">A. Apple</button>
+                        </div>
+                        <div class="col-md-4">
+                          <button class="btn btn-block options">B. Mango</button>
+                        </div>
+                        <div class="col-md-4">
+                          <button class="btn btn-block options">C. Starfruit</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2">
+                      <a href="#"><img src="img/arrow.png" class="quiz-arrow-right"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(function(){
+
+        $(".options").on("click",function(){
+          $(".options").removeClass("btn-default")
+          $(this).addClass("btn-default")
+        })
+
+      })
+    </script>
+   
+  </body>
+</html>

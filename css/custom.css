@@ -1,0 +1,61 @@
+body {
+	overflow-x: hidden;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 100%;
+}
+.top-bar {
+	width: 100%;
+	height: 75px;
+	background-size: cover;
+}
+.bot-bar {
+	width: 100%;
+	height: 75px;
+	background-size: cover;
+}
+.form-input-name .form-group input{
+	font-size: 20pt !important;
+	/*border-color: #700bfb;*/
+	padding: 15px;
+	border: 2px solid #700bfb;
+}
+.form-input-question .form-group input, .form-input-question .form-group select{
+	/*padding: 15px;*/
+	border: 2px solid #700bfb;
+}
+.menu-area {
+	margin-top: 100px;
+}
+.board-area {
+	margin-bottom: 100px;
+	margin-top: 130px;
+}
+.setting-area {
+	margin-top: 150px !important;
+	font-size: 24pt;
+}
+.list-of-question-area {
+	margin-bottom: 100px;
+	margin-top: 130px;
+}
+.quiz-area {
+	margin-top: 100px;
+}
+.quiz-area .card {
+	min-height: 400px;
+}
+.quiz-area img.quiz-arrow-left {
+	transform: scaleX(-1);
+}
+.quiz-area button.btn {
+	border: 2px solid #700bfb;
+}
+.btn-default {
+	background-color: #700bfb;
+	color: #fff;
+}
+.btn-default:hover {
+	background-color: #700bfb;
+	color: #fff;	
+}
