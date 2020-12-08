@@ -16,8 +16,8 @@
   <body style="background-image: url(<?= base_url() ?>assets/template/img/main-background.png);">
     <div class="top-bar text-right fixed-top" style="background-image: url(<?= base_url() ?>assets/template/img/top-bar.png);">
         <div class="container">
-            <a href="index.html"><img src="<?= base_url() ?>assets/template/img/home-ico.png" class="mt-1 ml-3"></a>
-            <a href="setting.html"><img src="<?= base_url() ?>assets/template/img/setting-ico.png" class="mt-1 ml-3"></a>   
+            <a href="<?= base_url() ?>"><img src="<?= base_url() ?>assets/template/img/home-ico.png" class="mt-1 ml-3"></a>
+            <a href="<?= base_url("home/setting") ?>"><img src="<?= base_url() ?>assets/template/img/setting-ico.png" class="mt-1 ml-3"></a>
         </div>
     </div>
     <div class="bot-bar fixed-bottom" style="background-image: url(<?= base_url() ?>assets/template/img/bot-bar.png);">
