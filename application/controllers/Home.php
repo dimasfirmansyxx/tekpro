@@ -15,7 +15,7 @@ class Home extends CI_Controller {
 			if ( $login ) {
 				redirect(base_url("admin"));
 			} else {
-				$this->sess->set_flash("Wrong password!","error");
+				$this->sess->set_flash("Forbidden","Wrong password!","error");
 				redirect(base_url());
 			}
 		} else {

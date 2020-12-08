@@ -9,6 +9,7 @@
     <script src="<?= base_url() ?>assets/template/js/jquery.min.js"></script>
     <script src="<?= base_url() ?>assets/template/js/popper.js"></script>
     <script src="<?= base_url() ?>assets/template/js/bootstrap.min.js"></script>
+    <script src="<?= base_url() ?>assets/template/js/swal.js"></script>
 
     <title><?= $pagetitle ?></title>
   </head>

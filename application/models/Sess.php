@@ -1,7 +1,7 @@
 <?php 
 
 class Sess extends CI_Model {
-	public function set_flash($msg,$status)
+	public function set_flash($title,$msg,$status)
 	{
 		$_SESSION["flash_data"] = [
 			"msg" => $msg,
