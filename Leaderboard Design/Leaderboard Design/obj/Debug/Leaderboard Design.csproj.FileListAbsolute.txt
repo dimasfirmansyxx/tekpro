@@ -1,9 +1,0 @@
-c:\users\user\documents\visual studio 2015\Projects\Leaderboard Design\Leaderboard Design\bin\Debug\Leaderboard Design.exe.config
-c:\users\user\documents\visual studio 2015\Projects\Leaderboard Design\Leaderboard Design\bin\Debug\Leaderboard Design.exe
-c:\users\user\documents\visual studio 2015\Projects\Leaderboard Design\Leaderboard Design\bin\Debug\Leaderboard Design.pdb
-c:\users\user\documents\visual studio 2015\Projects\Leaderboard Design\Leaderboard Design\obj\Debug\Leaderboard Design.csprojResolveAssemblyReference.cache
-c:\users\user\documents\visual studio 2015\Projects\Leaderboard Design\Leaderboard Design\obj\Debug\Leaderboard_Design.Form1.resources
-c:\users\user\documents\visual studio 2015\Projects\Leaderboard Design\Leaderboard Design\obj\Debug\Leaderboard_Design.Properties.Resources.resources
-c:\users\user\documents\visual studio 2015\Projects\Leaderboard Design\Leaderboard Design\obj\Debug\Leaderboard Design.csproj.GenerateResource.Cache
-c:\users\user\documents\visual studio 2015\Projects\Leaderboard Design\Leaderboard Design\obj\Debug\Leaderboard Design.exe
-c:\users\user\documents\visual studio 2015\Projects\Leaderboard Design\Leaderboard Design\obj\Debug\Leaderboard Design.pdb
