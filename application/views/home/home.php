@@ -55,7 +55,11 @@
         $("body").keydown(function(e){
              let keyCode = e.keyCode || e.which
              if ( keyCode == 119 ) {
-                $("#mdlAdminLogin").modal("show")
+                <?php if ( isset($_SESSION["admin"]) ): ?>
+                  window.location = '<?= base_url("admin") ?>'
+                <?php else: ?>
+                  $("#mdlAdminLogin").modal("show")
+                <?php endif ?>
              }       
         })  
     })
