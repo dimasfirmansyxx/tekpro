@@ -17,13 +17,22 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th>1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>Otto</td>
-                  <td><button class="btn btn-danger btn-sm">Delete</button></td>
-                </tr>
+                <?php if ( count($questions) == 0 ): ?>
+                  <tr>
+                    <td colspan="5" align="center">No question added</td>
+                  </tr>
+                <?php else: ?>
+                  <?php $i = 1;
+                  foreach ($questions as $question): ?>
+                    <tr>
+                      <th><?= $i++ ?></th>
+                      <td><?= base_url("assets/image/question/") . $question['image'] ?></td>
+                      <td><?= $question['question'] ?></td>
+                      <td><?= $this->question->get_options_data(["id_option" => $question['correct']]) ?></td>
+                      <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                    </tr>
+                  <?php endforeach ?>
+                <?php endif ?>
               </tbody>
             </table>
           </div>
