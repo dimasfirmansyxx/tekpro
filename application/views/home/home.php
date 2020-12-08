@@ -54,7 +54,6 @@
         })
 
         $("body").keydown(function(e){
-             e.preventDefault()
              let keyCode = e.keyCode || e.which
              if ( keyCode == 119 ) {
                 $("#mdlAdminLogin").modal("show")
