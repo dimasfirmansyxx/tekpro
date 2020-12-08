@@ -12,7 +12,6 @@
     </div>
 </div>
 
-
 <div class="modal fade" id="mdlInputBox" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content p-5">
@@ -39,7 +38,7 @@
                 <input type="password" name="password" class="form-control" required placeholder="Enter password" autocomplete="off">
             </div>
             <div class="text-center">
-                <input type="image" name="adminlogin" alt="Submit" src="img/btn-confirm.png">
+                <input type="image" name="adminlogin" src="img/btn-confirm.png">
             </div>
         </form>
       </div>

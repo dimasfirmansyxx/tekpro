@@ -9,7 +9,7 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-		if ( isset($_POST['adminlogin']) ) {
+		if ( isset($_POST['adminlogin_x']) ) {
 			$data['password'] = $this->input->post("password",true);
 			$login = $this->sess->admin_set($data);
 			if ( $login ) {
