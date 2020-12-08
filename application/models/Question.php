@@ -33,6 +33,12 @@ class Question extends CI_Model {
 		return $this->db->get_where("tbloptions",$condition)->result_array()[0];
 	}
 
+	public function get_last_id($table,$key)
+	{
+		$this->db->order_by($key,"desc");
+		return $this->db->get($table)->result_array()[0][$key];
+	}
+
 	public function upload()
 	{
 		$name = $_FILES["image"]['name'];
@@ -51,5 +57,44 @@ class Question extends CI_Model {
 		} else {
 			return 0;
 		}
+	}
+
+	public function add($data)
+	{
+		$question = [
+			"question" => $data['question'],
+			"image" => $data['image'],
+			"correct" => 0
+		];
+		$this->db->insert("tblquestion",$question);
+
+		$id_question = $this->get_last_id("tblquestion","id_question");
+
+		$this->db->insert("tbloptions",["id_question" => $id_question, "option" => $data['option_a']]);
+		if ( $data['correct'] == "a" ) {
+			$id_option = $this->get_last_id("tbloptions","id_option");
+			$this->db->where("id_question",$id_question);
+			$this->db->set("correct",$id_option);
+			$this->db->update("tblquestion");
+		}
+
+		$this->db->insert("tbloptions",["id_question" => $id_question, "option" => $data['option_b']]);
+		if ( $data['correct'] == "b" ) {
+			$id_option = $this->get_last_id("tbloptions","id_option");
+			$this->db->where("id_question",$id_question);
+			$this->db->set("correct",$id_option);
+			$this->db->update("tblquestion");
+		}
+
+		$this->db->insert("tbloptions",["id_question" => $id_question, "option" => $data['option_c']]);
+		if ( $data['correct'] == "c" ) {
+			$id_option = $this->get_last_id("tbloptions","id_option");
+			$this->db->where("id_question",$id_question);
+			$this->db->set("correct",$id_option);
+			$this->db->update("tblquestion");
+		}
+
+		$this->sess->set_flash("Success","Question added","success");
+		return true;
 	}
 }

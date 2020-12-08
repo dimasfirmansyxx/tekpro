@@ -26,9 +26,9 @@
                   foreach ($questions as $question): ?>
                     <tr>
                       <th><?= $i++ ?></th>
-                      <td><?= base_url("assets/image/question/") . $question['image'] ?></td>
+                      <td><img src="<?= base_url("assets/image/question/") . $question['image'] ?>" height="100"></td>
                       <td><?= $question['question'] ?></td>
-                      <td><?= $this->question->get_options_data(["id_option" => $question['correct']]) ?></td>
+                      <td><?= $this->question->get_options_data(["id_option" => $question['correct']])['option'] ?></td>
                       <td><button class="btn btn-danger btn-sm">Delete</button></td>
                     </tr>
                   <?php endforeach ?>
@@ -64,7 +64,7 @@
               </div>
               <div class="col-md-4 form-group">
                 <label>Option C</label>
-                <input type="text" name="option_C" class="form-control" required autocomplete="off">
+                <input type="text" name="option_c" class="form-control" required autocomplete="off">
               </div>
             </div>
             <div class="form-group">
@@ -76,7 +76,7 @@
               </select>
             </div>
             <div class="text-center">
-                <input type="image" alt="Submit" name="submit" src="img/btn-confirm.png">
+                <input type="image" alt="Submit" name="submit" src="<?= base_url("assets/template/img/btn-confirm.png") ?>">
             </div>
         </form>
       </div>
