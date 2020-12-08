@@ -5,9 +5,9 @@
             <img src="img/L-ENGLISH.png" class="img-fluid">
         </div>
         <div class="menu-button">
-            <a href="#" class="btn-start"><img src="img/btn-start.png" class="img-fluid mb-4"></a>
-            <a href="leaderboard.html"><img src="img/btn-leaderboard.png" class="img-fluid mb-4"></a>
-            <a href="#"><img src="img/btn-exit.png" class="img-fluid mb-4"></a>
+          <a href="#" class="btn-start"><img src="img/btn-start.png" class="img-fluid mb-4"></a>
+          <a href="#"><img src="img/btn-leaderboard.png" class="img-fluid mb-4"></a>
+          <a href="#"><img src="img/btn-exit.png" class="img-fluid mb-4"></a>
         </div>
     </div>
 </div>
@@ -39,7 +39,7 @@
                 <input type="password" name="password" class="form-control" required placeholder="Enter password" autocomplete="off">
             </div>
             <div class="text-center">
-                <input type="image" alt="Submit" src="img/btn-confirm.png">
+                <input type="image" name="adminlogin" alt="Submit" src="img/btn-confirm.png">
             </div>
         </form>
       </div>
