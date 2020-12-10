@@ -10,11 +10,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-            </tr>
+            <?php if ( count($users) > 0 ): ?>
+              <?php $i = 1;
+              foreach ($users as $user): ?>
+                <td><?= $i++ ?></td>
+                <td><?= ucwords($user['name']) ?></td>
+                <td><?= $user['score'] ?></td>
+              <?php endforeach ?>
+            <?php else: ?>
+              <td colspan="3" align="center">There are no user yet</td>
+            <?php endif ?>
           </tbody>
         </table>
     </div>

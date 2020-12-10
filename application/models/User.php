@@ -21,4 +21,11 @@ class User extends CI_Model {
 			return 0;
 		}
 	}
+
+	public function get_leaderboard()
+	{
+		$this->db->order_by("score","desc");
+		$this->db->limit(10);
+		return $this->db->get("tblboard")->result_array();
+	}
 }
