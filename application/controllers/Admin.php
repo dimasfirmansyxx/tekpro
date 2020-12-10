@@ -39,6 +39,20 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function edit($id_question = null)
+	{
+		if ( $id_question == null ) {
+			redirect(base_url("admin"));
+		} else {
+			$data['pagetitle'] = "Admin";
+			$data['question'] = $this->question->get_data(["id_question" => $id_question]);
+			$data['option'] = $this->question->get_options(["id_question" => $id_question]);
+			$this->load->view("zzz/head",$data);
+			$this->load->view("admin/edit");
+			$this->load->view("zzz/foot");
+		}
+	}
+
 	public function logout()
 	{
 		unset($_SESSION["admin"]);
