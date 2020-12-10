@@ -27,8 +27,21 @@ class Start extends CI_Controller {
 	public function push($q_number, $answer)
 	{
 		$this->sess->push_answer($q_number,$answer);
-		$q_number++;
-		$direct = "start/index/" . $q_number;
-		redirect(base_url($direct));
+		if ( $q_number >= 10 ) {
+			redirect(base_url("start/finish"));
+		} else {
+			$q_number++;
+			$direct = "start/index/" . $q_number;
+			redirect(base_url($direct));
+		}
+	}
+
+	public function finish()
+	{
+		$data['pagetitle'] = "Game";
+		$data['answers'] = $_SESSION["game_detail"]['answer'];
+		$this->load->view("zzz/head",$data);
+		$this->load->view("start/finish");
+		$this->load->view("zzz/foot");
 	}
 }
