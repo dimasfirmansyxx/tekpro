@@ -44,12 +44,41 @@ class Admin extends CI_Controller {
 		if ( $id_question == null ) {
 			redirect(base_url("admin"));
 		} else {
-			$data['pagetitle'] = "Admin";
-			$data['question'] = $this->question->get_data(["id_question" => $id_question]);
-			$data['option'] = $this->question->get_options(["id_question" => $id_question]);
-			$this->load->view("zzz/head",$data);
-			$this->load->view("admin/edit");
-			$this->load->view("zzz/foot");
+			if ( isset($_POST['submit_x']) ) {
+				$question = $this->question->get_data(["id_question" => $id_question]);
+				if ( $_FILES["image"]['error'] == 4 ) {
+					$newname = $question['image'];
+				} else {
+					$upload = $this->question->upload();
+					if ( $upload ) {
+						$newname = $upload;
+						unlink("./assets/image/question/" . $question['image']);
+					} else {
+						$this->sess->set_flash("Error","The file must have a .jpg, .jpeg, .bmp, or .png extension","error");
+						redirect(base_url("admin/edit") . $id_question);
+						exit;
+					}
+				}
+
+				$data = [
+					"id_question" => $id_question,
+					"question" => $this->input->post("question",true),
+					"image" => $newname,
+					"option_a" => $this->input->post("option_a",true),
+					"option_b" => $this->input->post("option_b",true),
+					"option_c" => $this->input->post("option_c",true),
+					"correct" => $this->input->post("correct",true),
+				];
+				$this->question->edit($data);
+				redirect(base_url("admin"));
+			} else {
+				$data['pagetitle'] = "Admin";
+				$data['question'] = $this->question->get_data(["id_question" => $id_question]);
+				$data['option'] = $this->question->get_options(["id_question" => $id_question]);
+				$this->load->view("zzz/head",$data);
+				$this->load->view("admin/edit");
+				$this->load->view("zzz/foot");
+			}
 		}
 	}
 

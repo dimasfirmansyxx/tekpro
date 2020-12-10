@@ -104,4 +104,36 @@ class Question extends CI_Model {
 		$this->sess->set_flash("Success","Question added","success");
 		return true;
 	}
+
+	public function edit($data)
+	{
+		$option = $this->get_options(["id_question" => $data['id_question']]);
+		$tblquestion = [
+			"question" => $data['question'],
+			"image" => $data['image'],
+		];
+		if ( $data['correct'] == "a" ) {
+			$tblquestion['correct'] = $option[0]['id_option'];
+		} elseif ( $data['correct'] == "b" ) {
+			$tblquestion['correct'] = $option[1]['id_option'];
+		} elseif ( $data['correct'] == "c" ) {
+			$tblquestion['correct'] = $option[2]['id_option'];
+		}
+		$this->db->where("id_question",$data['id_question']);
+		$this->db->update("tblquestion",$tblquestion);
+	
+
+		// option A
+		$this->db->where("id_option",$option[0]['id_option']);
+		$this->db->set("option",$data['option_a']);
+		$this->db->update("tbloptions");
+		// option B
+		$this->db->where("id_option",$option[1]['id_option']);
+		$this->db->set("option",$data['option_b']);
+		$this->db->update("tbloptions");
+		// option C
+		$this->db->where("id_option",$option[2]['id_option']);
+		$this->db->set("option",$data['option_c']);
+		$this->db->update("tbloptions");
+	}
 }
