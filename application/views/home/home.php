@@ -29,6 +29,20 @@
   </div>
 </div>
 
+<?php if ( isset($_SESSION["game_detail"]) ): ?>
+  <div class="modal fade" id="mdlContinue" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center p-4">
+          <h2>Are you want continue your progress, <?= $_SESSION["game_detail"]['player_name'] ?> ?</h2>
+          <button type="button" class="btn btn-secondary mt-3 mr-1 btn-lg btn-create-new-session" data-dismiss="modal">No</button>
+          <a href="<?= base_url("start") ?>" class="btn btn-lg text-white mt-3 ml-1" style="background: #700bfb">Yes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php endif ?>
+
 <div class="modal fade" id="mdlAdminLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content p-5">
@@ -61,6 +75,14 @@
 <script>
     $(function(){
         $(".btn-start").on("click",function(){
+          <?php if ( isset($_SESSION["game_detail"]) ): ?>
+            $("#mdlContinue").modal("show")
+          <?php else: ?>
+            $("#mdlInputBox").modal("show")
+          <?php endif ?>
+        })
+
+        $(".btn-create-new-session").on("click",function(){
             $("#mdlInputBox").modal("show")
         })
 
