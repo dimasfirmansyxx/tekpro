@@ -36,7 +36,10 @@
                       <td><img src="<?= base_url("assets/image/question/") . $question['image'] ?>" height="100"></td>
                       <td><?= $question['question'] ?></td>
                       <td><?= $this->question->get_options_data(["id_option" => $question['correct']])['option'] ?></td>
-                      <td><button class="btn btn-danger btn-sm">Delete</button></td>
+                      <td>
+                        <a href="<?= base_url("admin/edit/") . $question['id_question'] ?>" class="btn btn-primary btn-sm">Edit</a>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                      </td>
                     </tr>
                   <?php endforeach ?>
                 <?php endif ?>
