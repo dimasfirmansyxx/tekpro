@@ -14,7 +14,7 @@
                   <div class="text-center">
                     <img src="<?= base_url("assets/image/question/") . $question['image'] ?>" height="100">
                   </div>
-                  <input type="file" name="image" class="form-control-file" required>
+                  <input type="file" name="image" class="form-control-file">
               </div>
               <div class="row">
                 <div class="col-md-4 form-group">
