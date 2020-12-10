@@ -73,6 +73,11 @@ class Sess extends CI_Model {
 		return true;
 	}
 
+	public function setting($data)
+	{
+		$_SESSION["setting"] = $data;
+	}
+
 	public function destroy()
 	{
 		session_destroy();

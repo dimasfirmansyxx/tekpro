@@ -7,6 +7,9 @@ class Home extends CI_Controller {
 		$this->load->model("Sess","sess");
 		$this->load->model("Question","question");
 		$this->load->model("User","user");
+		if ( !isset($_SESSION["setting"]) ) {
+			$this->sess->setting(["music" => "on"]);
+		}
 	}
 
 	public function index()
@@ -39,10 +42,15 @@ class Home extends CI_Controller {
 
 	public function setting()
 	{
-		$data['pagetitle'] = "Setting";
-		$this->load->view("zzz/head",$data);
-		$this->load->view("home/setting");
-		$this->load->view("zzz/foot");
+		if ( isset($_POST['confirm_x']) ) {
+			$this->sess->setting(["music" => $this->input->post("music",true)]);
+			redirect(base_url());
+		} else {
+			$data['pagetitle'] = "Setting";
+			$this->load->view("zzz/head",$data);
+			$this->load->view("home/setting");
+			$this->load->view("zzz/foot");
+		}
 	}
 
 	public function destroy_session()

@@ -7,11 +7,11 @@
             <form action="" method="post" class="mt-5">
               <div class="form-group ">
                 <label class="mr-4">Music :</label>
-                <input class="form-check-input mt-3" type="radio" name="music" id="musicon" value="on" checked>
+                <input class="form-check-input mt-3" type="radio" name="music" id="musicon" value="on" <?= ($_SESSION["setting"]['music'] == "on") ? "checked" : "" ?>>
                 <label class="form-check-label mr-4" for="musicon">
                   ON
                 </label>
-                <input class="form-check-input mt-3" type="radio" name="music" id="musicoff" value="off">
+                <input class="form-check-input mt-3" type="radio" name="music" id="musicoff" value="off" <?= ($_SESSION["setting"]['music'] == "on") ? "" : "checked" ?>>
                 <label class="form-check-label" for="musicoff">
                   OFF
                 </label>
