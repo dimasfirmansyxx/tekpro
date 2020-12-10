@@ -49,4 +49,12 @@ class Start extends CI_Controller {
 			$this->load->view("zzz/foot");
 		}
 	}
+
+	public function result()
+	{
+		$data['pagetitle'] = "Game";
+		$this->load->view("zzz/head",$data);
+		$this->load->view("start/result");
+		$this->load->view("zzz/foot");
+	}
 }
