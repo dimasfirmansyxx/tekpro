@@ -23,4 +23,12 @@ class Start extends CI_Controller {
 		$this->load->view("start/start");
 		$this->load->view("zzz/foot");
 	}
+
+	public function push($q_number, $answer)
+	{
+		$this->sess->push_answer($q_number,$answer);
+		$q_number++;
+		$direct = "start/index/" . $q_number;
+		redirect(base_url($direct));
+	}
 }

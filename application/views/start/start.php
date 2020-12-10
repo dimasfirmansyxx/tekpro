@@ -14,7 +14,7 @@
               <div class="row text-center">
                 <div class="col-md-2">
                   <?php if ( $q_number > 1 ): ?>
-                    <a href="#"><img src="<?= base_url() ?>assets/template/img/arrow.png" class="quiz-arrow-left"></a>
+                    <a href="<?= base_url() ?>/start/index/<?= $q_number - 1 ?>"><img src="<?= base_url() ?>assets/template/img/arrow.png" class="quiz-arrow-left"></a>
                   <?php endif ?>
                 </div>
                 <div class="col-md-8">
@@ -22,13 +22,13 @@
                     <?php $i = "A";
                     foreach ($options as $option): ?>
                       <div class="col-md-4">
-                        <button class="btn btn-block options"><?= $i++ ?>. <?= $option['option'] ?></button>
+                        <button class="btn btn-block options" id="Opt<?= $option['id_option'] ?>" data-id="<?= $option['id_option'] ?>"><?= $i++ ?>. <?= $option['option'] ?></button>
                       </div>
                     <?php endforeach ?>
                   </div>
                 </div>
                 <div class="col-md-2">
-                  <a href="#"><img src="<?= base_url() ?>assets/template/img/arrow.png" class="quiz-arrow-right"></a>
+                  <a href="#" id="btnNext"><img src="<?= base_url() ?>assets/template/img/arrow.png" class="quiz-arrow-right"></a>
                 </div>
               </div>
             </div>
@@ -40,9 +40,20 @@
 <script>
   $(function(){
 
+    const answers = <?= json_encode($_SESSION["game_detail"]['answer']) ?>;
+    let answer = 0;
+
     $(".options").on("click",function(){
       $(".options").removeClass("btn-default")
       $(this).addClass("btn-default")
+      answer = $(this).attr("data-id");
+      console.log(answer);
+    })
+
+    $("#btnNext").on("click",function(e){
+      e.preventDefault()
+      let url = "<?= base_url() ?>start/push/<?= $q_number ?>/" + answer
+      window.location = url;
     })
 
   })
