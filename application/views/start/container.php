@@ -1,7 +1,9 @@
 <div class="container data-area">
 
 </div>
-<audio src="<?= base_url("assets/backsound.mp3") ?>" autoplay="autoplay"></audio>
+<?php if ( $_SESSION["setting"]['music'] == "on" ): ?>
+	<audio src="<?= base_url("assets/backsound.mp3") ?>" autoplay="autoplay"></audio>
+<?php endif ?>
 <script>
 	$(function(){
 
