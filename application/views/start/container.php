@@ -1,7 +1,7 @@
 <div class="container data-area">
 
 </div>
-
+<audio src="<?= base_url("assets/backsound.mp3") ?>" autoplay="autoplay"></audio>
 <script>
 	$(function(){
 
