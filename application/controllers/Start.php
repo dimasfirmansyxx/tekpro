@@ -13,26 +13,32 @@ class Start extends CI_Controller {
 		}
 	}
 
-	public function index($q_number = 1)
+	public function index()
+	{
+		$data['pagetitle'] = "Game";
+		$this->load->view("zzz/head",$data);
+		$this->load->view("start/container");
+		$this->load->view("zzz/foot");
+	}
+
+	public function question($q_number = 1)
 	{
 		$data['pagetitle'] = "Game";
 		$data['q_number'] = $q_number;
 		$data['question'] = $_SESSION["game_detail"]['questions'][$q_number - 1];
 		$data['options'] = $this->question->get_options(["id_question" => $data['question']['id_question']]);
-		$this->load->view("zzz/head",$data);
-		$this->load->view("start/start");
-		$this->load->view("zzz/foot");
+		// $this->load->view("zzz/single",$data);
+		$this->load->view("start/start",$data);
 	}
 
-	public function push($q_number, $answer)
+	public function push()
 	{
+		$q_number = $this->input->post("q_number",true);
+		$answer = $this->input->post("answer",true);
+		
 		$this->sess->push_answer($q_number,$answer);
 		if ( $q_number >= 10 ) {
 			redirect(base_url("start/finish"));
-		} else {
-			$q_number++;
-			$direct = "start/index/" . $q_number;
-			redirect(base_url($direct));
 		}
 	}
 
