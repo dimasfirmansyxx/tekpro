@@ -40,8 +40,8 @@
 <script>
   $(function(){
 
-    const answers = <?= json_encode($_SESSION["game_detail"]['answer']) ?>;
-    let answer = 0;
+    let answer = <?= ($_SESSION["game_detail"]['answer'][$q_number]) != "" ? $_SESSION["game_detail"]['answer'][$q_number] : 0 ?>;
+
 
     $(".options").on("click",function(){
       $(".options").removeClass("btn-default")
@@ -49,6 +49,8 @@
       answer = $(this).attr("data-id");
       console.log(answer);
     })
+
+    $("#Opt" + answer).click()
 
     $("#btnNext").on("click",function(e){
       e.preventDefault()
