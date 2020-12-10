@@ -38,7 +38,7 @@ class Sess extends CI_Model {
 
 	public function finish_game()
 	{
-		$questions = $_SESSION["game_detail"]['question'];
+		$questions = $_SESSION["game_detail"]['questions'];
 		$answer = $_SESSION["game_detail"]['answer'];
 		$correct = 0;
 
@@ -46,7 +46,7 @@ class Sess extends CI_Model {
 
 		$i = 1;
 		foreach ($questions as $question) {
-			if ( $question['correct'] == $answer[$i]['id_option'] ) {
+			if ( $question['correct'] == $answer[$i] ) {
 				$correct++;
 			} else {
 				array_push($wrong_answer, $i);

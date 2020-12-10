@@ -53,6 +53,8 @@ class Start extends CI_Controller {
 	public function result()
 	{
 		$data['pagetitle'] = "Game";
+		$data['questions'] = $_SESSION["game_detail"]["questions"];
+		$data['answers'] = $_SESSION["game_detail"]["answer"];
 		$this->load->view("zzz/head",$data);
 		$this->load->view("start/result");
 		$this->load->view("zzz/foot");
