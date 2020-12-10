@@ -13,9 +13,11 @@
             <?php if ( count($users) > 0 ): ?>
               <?php $i = 1;
               foreach ($users as $user): ?>
-                <td><?= $i++ ?></td>
-                <td><?= ucwords($user['name']) ?></td>
-                <td><?= $user['score'] ?></td>
+                <tr>
+                  <td><?= $i++ ?></td>
+                  <td><?= ucwords($user['name']) ?></td>
+                  <td><?= $user['score'] ?></td>
+                </tr>
               <?php endforeach ?>
             <?php else: ?>
               <td colspan="3" align="center">There are no user yet</td>
