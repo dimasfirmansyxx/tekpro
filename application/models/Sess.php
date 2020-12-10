@@ -36,6 +36,37 @@ class Sess extends CI_Model {
 		return true;
 	}
 
+	public function finish_game()
+	{
+		$questions = $_SESSION["game_detail"]['question'];
+		$answer = $_SESSION["game_detail"]['answer'];
+		$correct = 0;
+
+		$wrong_answer = [];
+
+		$i = 1;
+		foreach ($questions as $question) {
+			if ( $question['correct'] == $answer[$i]['id_option'] ) {
+				$correct++;
+			} else {
+				array_push($wrong_answer, $i);
+			}
+			$i++;
+		}
+
+		$score = $correct * 10;
+
+		$data = [
+			"name" => $_SESSION['game_detail']['player_name'],
+			"score" => $score,
+			"submit_date" => date("Y-m-d")
+		];
+		$this->db->insert("tblboard",$data);
+
+		$_SESSION["game_detail"]['wrong_answer'] = $wrong_answer;
+		$_SESSION["game_detail"]['score'] = $score;
+	}
+
 	public function push_answer($q_number,$answer)
 	{
 		$_SESSION["game_detail"]['answer'][$q_number] = $answer;

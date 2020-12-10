@@ -38,10 +38,15 @@ class Start extends CI_Controller {
 
 	public function finish()
 	{
-		$data['pagetitle'] = "Game";
-		$data['answers'] = $_SESSION["game_detail"]['answer'];
-		$this->load->view("zzz/head",$data);
-		$this->load->view("start/finish");
-		$this->load->view("zzz/foot");
+		if ( isset($_GET['allset']) ) {
+			$this->sess->finish_game();
+			redirect(base_url("start/result"));
+		} else {
+			$data['pagetitle'] = "Game";
+			$data['answers'] = $_SESSION["game_detail"]['answer'];
+			$this->load->view("zzz/head",$data);
+			$this->load->view("start/finish");
+			$this->load->view("zzz/foot");
+		}
 	}
 }

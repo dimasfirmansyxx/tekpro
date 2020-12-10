@@ -7,10 +7,10 @@
               <div class="row">
                 <div class="col-3"></div>
                 <div class="col-md-3">
-                  <a href="#" class="btn btn-secondary">Back to first question</a>
+                  <a href="<?= base_url("start") ?>" class="btn btn-secondary">Back to first question</a>
                 </div>
                 <div class="col-md-3 text-right">
-                  <a href="#" class="btn text-white" style="background: #700bfb">FINISH!</a>
+                  <a href="?allset=" class="btn text-white" style="background: #700bfb">FINISH!</a>
                 </div>
                 <div class="col-3"></div>
 
