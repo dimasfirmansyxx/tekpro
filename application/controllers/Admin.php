@@ -38,4 +38,10 @@ class Admin extends CI_Controller {
 			$this->load->view("zzz/foot");
 		}
 	}
+
+	public function logout()
+	{
+		unset($_SESSION["admin"]);
+		redirect(base_url());
+	}
 }

@@ -97,7 +97,7 @@
       <div class="modal-body text-center p-4">
         <h2>Are you sure want to logout ?</h2>
         <button type="button" class="btn btn-secondary mt-3 mr-1 btn-lg" data-dismiss="modal">No</button>
-        <a href="<?= base_url('home/destroy_session') ?>" class="btn btn-lg text-white mt-3 ml-1" style="background: #700bfb">Yes</a>
+        <a href="<?= base_url('admin/logout') ?>" class="btn btn-lg text-white mt-3 ml-1" style="background: #700bfb">Yes</a>
       </div>
     </div>
   </div>
