@@ -21,7 +21,7 @@
                 <input type="text" name="name" class="form-control" required placeholder="Enter your name" autocomplete="off">
             </div>
             <div class="text-center">
-                <input type="image" alt="Submit" src="<?= base_url() ?>assets/template/img/btn-confirm.png">
+                <input type="image" name="start" alt="Submit" src="<?= base_url() ?>assets/template/img/btn-confirm.png">
             </div>
         </form>
       </div>

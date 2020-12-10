@@ -4,9 +4,9 @@ class Question extends CI_Model {
 	public function get($condition = null)
 	{
 		if ( $condition == null ) {
-			$get = $this->db->get("tblquestion");
+			$get = $this->db->get("tblquestion")->result_array();
 		} else {
-			$get = $this->db->get_where("tblquestion",$condition);
+			$get = $this->db->get_where("tblquestion",$condition)->result_array();
 		}
 
 		return $get->result_array();
@@ -17,12 +17,19 @@ class Question extends CI_Model {
 		return $this->db->get_where("tblquestion",$condition)->result_array()[0];
 	}
 
+	public function get_random($limit)
+	{
+		$this->db->order_by("id_question","random");
+		$this->db->limit($limit);
+		return $this->db->get("tblquestion")->result_array();
+	}
+
 	public function get_options($condition)
 	{
 		if ( $condition == null ) {
-			$get = $this->db->get("tbloptions");
+			$get = $this->db->get("tbloptions")->result_array();
 		} else {
-			$get = $this->db->get_where("tbloptions",$condition);
+			$get = $this->db->get_where("tbloptions",$condition)->result_array();
 		}
 
 		return $get->result_array();

@@ -22,6 +22,18 @@ class Sess extends CI_Model {
 		}
 	}
 
+	public function start_game($name)
+	{
+		$get_question = $this->question->get_random(10);
+		$answer = [];
+
+		$_SESSION["game_detail"] = [
+			"player_name" => $name,
+			"questions" => $get_question,
+			"answer" => $answer
+		];
+	}
+
 	public function destroy()
 	{
 		session_destroy();
