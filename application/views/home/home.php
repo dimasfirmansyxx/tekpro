@@ -6,7 +6,7 @@
         </div>
         <div class="menu-button">
           <a href="#" class="btn-start"><img src="<?= base_url() ?>assets/template/img/btn-start.png" class="img-fluid mb-4"></a>
-          <a href="#"><img src="<?= base_url() ?>assets/template/img/btn-leaderboard.png" class="img-fluid mb-4"></a>
+          <a href="<?= base_url("leaderboard") ?>"><img src="<?= base_url() ?>assets/template/img/btn-leaderboard.png" class="img-fluid mb-4"></a>
           <a href="#" class="btn-exit"><img src="<?= base_url() ?>assets/template/img/btn-exit.png" class="img-fluid mb-4"></a>
         </div>
     </div>
