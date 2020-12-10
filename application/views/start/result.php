@@ -43,4 +43,4 @@
       </div>
   </div>
 </div>
-<?php session_destroy() ?>
+<?php unset($_SESSION['game_detail']) ?>
