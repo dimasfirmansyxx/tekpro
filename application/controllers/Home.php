@@ -37,6 +37,14 @@ class Home extends CI_Controller {
 		}
 	}
 
+	public function setting()
+	{
+		$data['pagetitle'] = "Setting";
+		$this->load->view("zzz/head",$data);
+		$this->load->view("home/setting");
+		$this->load->view("zzz/foot");
+	}
+
 	public function destroy_session()
 	{
 		$this->sess->destroy();
