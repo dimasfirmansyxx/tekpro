@@ -95,7 +95,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body text-center p-4">
-        <h2>Are you sure wan't to logout ?</h2>
+        <h2>Are you sure want to logout ?</h2>
         <button type="button" class="btn btn-secondary mt-3 mr-1 btn-lg" data-dismiss="modal">No</button>
         <a href="<?= base_url('home/destroy_session') ?>" class="btn btn-lg text-white mt-3 ml-1" style="background: #700bfb">Yes</a>
       </div>
