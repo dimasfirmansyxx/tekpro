@@ -25,7 +25,6 @@ class Sess extends CI_Model {
 	public function start_game($name)
 	{
 		$get_question = $this->question->get_random(10);
-		// $answer = [1 => "",2 => "",3 => "",4 => "",5 => "",6 => "",7 => "",8 => "",9 => "",10 => ""];
 		$answer = [];
 
 		$_SESSION["game_detail"] = [
