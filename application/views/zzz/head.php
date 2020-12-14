@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="<?= base_url() ?>assets/template/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/template/css/custom.css">
+    <link rel="stylesheet" href="https://use.typekit.net/sjn3cgu.css">
     <script src="<?= base_url() ?>assets/template/js/jquery.min.js"></script>
     <script src="<?= base_url() ?>assets/template/js/popper.js"></script>
     <script src="<?= base_url() ?>assets/template/js/bootstrap.min.js"></script>

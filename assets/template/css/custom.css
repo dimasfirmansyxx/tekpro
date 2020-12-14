@@ -3,6 +3,7 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	min-height: 100%;
+	font-family: tekton-pro, sans-serif;
 }
 .top-bar {
 	width: 100%;
