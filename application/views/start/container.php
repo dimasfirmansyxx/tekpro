@@ -35,5 +35,11 @@
 			})
 		})
 
+		$(".data-area").on("click","#btnPrevious",function(e){
+			e.preventDefault()
+			q_number = q_number - 1
+			$(".data-area").load(base_url + "start/question/" + q_number)
+		})
+
 	})
 </script>

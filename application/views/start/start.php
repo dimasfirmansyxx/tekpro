@@ -13,7 +13,7 @@
             <div class="row text-center">
               <div class="col-md-2">
                 <?php if ( $q_number > 1 ): ?>
-                  <a href="<?= base_url() ?>/start/index/<?= $q_number - 1 ?>"><img src="<?= base_url() ?>assets/template/img/arrow.png" class="quiz-arrow-left"></a>
+                  <a href="#" id="btnPrevious"><img src="<?= base_url() ?>assets/template/img/arrow.png" class="quiz-arrow-left"></a>
                 <?php endif ?>
               </div>
               <div class="col-md-8">
