@@ -105,6 +105,22 @@ class Question extends CI_Model {
 		return true;
 	}
 
+	public function delete($id_question)
+	{
+		$this->db->where("id_question",$id_question);
+		$this->db->delete("tbloptions");
+
+		$this->db->where("id_question",$id_question);
+		$delete = $this->db->delete("tblquestion");
+		if ( $delete ) {
+			$this->sess->set_flash("Success","Question deleted","success");
+			return true;
+		} else {
+			$this->sess->set_flash("Failed","Server error","error");
+			return false;
+		}
+	}
+
 	public function edit($data)
 	{
 		$option = $this->get_options(["id_question" => $data['id_question']]);

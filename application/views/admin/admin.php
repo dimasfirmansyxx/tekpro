@@ -38,7 +38,7 @@
                       <td><?= $this->question->get_options_data(["id_option" => $question['correct']])['option'] ?></td>
                       <td>
                         <a href="<?= base_url("admin/edit/") . $question['id_question'] ?>" class="btn btn-primary btn-sm">Edit</a>
-                        <button class="btn btn-danger btn-sm">Delete</button>
+                        <button class="btn btn-danger btn-sm btndelete" data-url="<?= base_url("admin/?delete=") . $question['id_question'] ?>">Delete</button>
                       </td>
                     </tr>
                   <?php endforeach ?>
@@ -105,3 +105,25 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="mdlDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center p-4">
+        <h2>Are you sure want to delete this question ?</h2>
+        <button type="button" class="btn btn-secondary mt-3 mr-1 btn-lg" data-dismiss="modal">No</button>
+        <a href="#" id="btnDeleteYes" class="btn btn-lg text-white mt-3 ml-1" style="background: #700bfb">Yes</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function() {
+    $(".btndelete").on("click",function(){
+      let url = $(this).attr("data-url")
+      $("#btnDeleteYes").attr("href",url)
+      $("#mdlDelete").modal("show")
+    })
+  })
+</script>
