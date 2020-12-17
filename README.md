@@ -1,9 +1,9 @@
 # TEKNIK PEMROGRAMAN
-Fredian Simanjuntak, S.Kom.
+Nama Dosen : Fredian Simanjuntak, S.Kom.
 <br>
 <br>
-## L-ENGLISH
-### 1SIMB Kelompok 1
+## Judul Proyek : L-ENGLISH
+### Nama Anggota :
 - Wiyandi (2031066)
 - Eric Fernando (2031106)
 - Dimas Firmansyah Nasution (2031109)
